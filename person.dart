@@ -1,8 +1,6 @@
 abstract class Person {
-  String name;
-  int age;
-
-  Person({required this.age, required this.name});
+  late final String name;
+  late final int age;
 
   void showName();
   void showAge();

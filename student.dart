@@ -1,21 +1,36 @@
 import 'person.dart';
 
-class Student extends Person {
-  int marks;
+class Student implements Person {
+  @override
+  final String name;
 
-  Student({required int age, required String name, required this.marks})
-      : super(age: age, name: name);
+  @override
+  final int age;
+
+  final int marks;
+
+  Student({required this.age, required this.name, required this.marks});
   void showMarks() {
-    print(marks);
+    print("Student Marks: $marks");
   }
 
   @override
   void showName() {
-    print(name);
+    print("Student Name: $name");
   }
 
   @override
   void showAge() {
-    print(age);
+    print("Student Age: $age");
+  }
+
+  @override
+  set age(int age) {
+    this.age = age;
+  }
+
+  @override
+  set name(String name) {
+    this.name = name;
   }
 }

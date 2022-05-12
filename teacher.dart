@@ -1,22 +1,27 @@
 import 'person.dart';
 
 class Teacher extends Person {
-  double salary;
+  @override
+  final String name;
 
-  Teacher({required int age, required String name, required this.salary})
-      : super(age: age, name: name);
+  @override
+  final int age;
+
+  final double salary;
+
+  Teacher({required this.age, required this.name, required this.salary});
 
   void showSalary() {
-    print(salary);
+    print("Teacher Salary: $salary");
   }
 
   @override
   void showName() {
-    print(name);
+    print("Teacher Name: $name");
   }
 
   @override
   void showAge() {
-    print(age);
+    print("Teacher Age: $age");
   }
 }
